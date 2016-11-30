@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsWebApp1", "NodejsWebApp1.njsproj", "{8C7E4077-A848-4D1F-BBF0-CE8DE3C4EED8}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SharePointNtlmAuthRequests", "SharePointNtlmAuthRequests.njsproj", "{8C7E4077-A848-4D1F-BBF0-CE8DE3C4EED8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

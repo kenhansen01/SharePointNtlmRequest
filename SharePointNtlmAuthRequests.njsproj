@@ -3,7 +3,7 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>NodejsWebApp1</Name>
+    <Name>SharePointNtlmAuthRequests</Name>
     <RootNamespace>NodejsWebApp1</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -11,7 +11,8 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8c7e4077-a848-4d1f-bbf0-ce8de3c4eed8</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
+    <ProjectHome>
+    </ProjectHome>
     <StartupFile>server.ts</StartupFile>
     <StartWebBrowser>True</StartWebBrowser>
     <SearchPath>
@@ -34,15 +35,28 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <Content Include=".babelrc" />
+    <Content Include="tools\config\sp.tslint.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+    <TypeScriptCompile Include="gulpfile.babel.ts" />
     <TypeScriptCompile Include="server.ts" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <TypeScriptCompile Include="tools\config.ts" />
+    <TypeScriptCompile Include="tools\config\sp.config.ts" />
+    <TypeScriptCompile Include="tools\manual-typings\https.extend.d.ts" />
+    <TypeScriptCompile Include="tools\tasks\sp.get_input.ts" />
+    <TypeScriptCompile Include="tools\utils\sp.get_site_collections.ts" />
+    <TypeScriptCompile Include="tools\utils\sp.rest_auth.interfaces.ts" />
+    <TypeScriptCompile Include="tools\utils\sp.rest_auth.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Scripts\" />
-    <Folder Include="Scripts\typings\" />
-    <Folder Include="Scripts\typings\node\" />
+    <Folder Include="tools\" />
+    <Folder Include="tools\config\" />
+    <Folder Include="tools\manual-typings\" />
+    <Folder Include="tools\tasks\" />
+    <Folder Include="tools\utils\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

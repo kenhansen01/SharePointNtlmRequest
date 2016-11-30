@@ -1,0 +1,5 @@
+﻿{
+  "extends": "./tools/config/sp.tslint.json",
+  "rules": {
+  }
+}
